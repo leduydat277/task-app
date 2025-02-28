@@ -17,7 +17,7 @@ export default function NewTask() {
 
   const handleSubmit = async (newTask: Task) => {
     try {
-      const response = await fetch(`/api/tasks/createTask`, {
+      const response = await fetch(`/api/createTask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newTask),

@@ -16,7 +16,7 @@ export default function TaskEdit({ task, onClose }: TaskEditProps) {
     }
 
     try {
-      const response = await fetch(`/api/tasks/${taskId}`, {
+      const response = await fetch(`/api/${taskId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedTask),
